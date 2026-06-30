@@ -1,37 +1,181 @@
 <!DOCTYPE html>
-
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Zone | Notícias e Bastidores da Fórmula 1</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Meu blog f1</h1>
-<p>Vou compartilhar conhecimentos sobre formula-1 e regras</p>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">F1<span>ZONE</span></h1>
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Classificação</a>
+                <a href="#">Corridas</a>
+                <a href="#">Equipes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="post-principal">
+            <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1200&auto=format&fit=crop&q=80" alt="Carro de Fórmula 1 na pista" class="f1-imagem">
+            
+            <div class="post-info">
+                <span class="tag-urgente">Giro de Notícias</span>
+                <h2>GP de Mônaco 2026: Estratégias de pneus devem definir o vencedor</h2>
+                <p class="meta-dados">Por Redação F1 Zone | Atualizado há 10 minutos</p>
+                
+                <p>As ruas de Monte Carlo prometem uma das corridas mais estratégicas da temporada. Com a previsão de clima instável e o asfalto novo em alguns trechos, as equipes de ponta já desenham cenários alternativos para as paradas nos boxes. Quem conseguirá a pole position?</p>
+                
+                <a href="#" class="botao-ler">Acompanhar ao Vivo</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 F1 Zone. Este é um site de fãs e não possui vínculo oficial com a Formula One Management.</p>
+    </footer>
+
 </body>
 </html>
-<main>
-<h2>Meu primeiro post</h2>
-<p>Por: Iris Fernanda</p>
-<p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de formula-1 e regras.</p>
-</main>
-<p>Este é um parágrafo de texto.</p>
-<p>Podemos escrever quantos parágrafos quisermos.</p>
-<style></style>
-main {
-background-color: #FFFFFF;
-color: #183C63;
+/* Reset e Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-max-width: 800px;
-margin: 0 auto;
-border: 5px solid #cf1010;
-padding: 16px;
+
+body {
+    background-color: #0b0b0c;
+    color: #f1f1f1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
 header {
-background-color: #183C63;
-color: #FFFFFF;
-text-align: center;
-max-width: 800px;
-margin: 0 auto;
-padding: 16px;
+    background-color: #15151e;
+    padding: 20px 0;
+    border-bottom: 4px solid #e10600; /* Vermelho F1 */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #e10600;
+}
+
+nav a {
+    color: #e1e1e6;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #e10600;
+}
+
+/* Layout do Post */
+.post-principal {
+    background-color: #1f1f27;
+    margin-top: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.f1-imagem {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.post-info {
+    padding: 35px;
+}
+
+.tag-urgente {
+    background-color: #e10600;
+    color: #ffffff;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+    letter-spacing: 1px;
+}
+
+.post-info h2 {
+    font-size: 36px;
+    margin-top: 15px;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.meta-dados {
+    color: #a4a4a4;
+    font-size: 13px;
+    margin: 12px 0 20px 0;
+}
+
+.post-info p {
+    color: #d1d1d6;
+    line-height: 1.7;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.botao-ler {
+    display: inline-block;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #e10600;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.botao-ler:hover {
+    background-color: #e10600;
+    box-shadow: 0 0 15px rgba(225, 6, 0, 0.4);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 50px 0;
+    color: #6c6c73;
+    font-size: 13px;
+    margin-top: 80px;
+    background-color: #0b0b0c;
+    border-top: 1px solid #1f1f27;
 }
